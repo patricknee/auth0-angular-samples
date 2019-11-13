@@ -4,3 +4,5 @@ auth0-variables.ts
 .env
 npm-debug.log
 package-lock.json
+auth_config.json
+.idea

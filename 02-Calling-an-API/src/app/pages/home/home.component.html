@@ -1,4 +1,14 @@
 <div class="container" *ngIf="auth.auth0Client$ | async">
+
+  <button *ngIf="auth.loggedIn" (click)="updateProfile()">Update Profile</button>
+
+  <div *ngIf="token">
+    <pre><code>{{token}}</code></pre>
+  </div>
+  <div *ngIf="decodedToken">
+    <pre><code class="json">{{decodedToken|json}}</code></pre>
+  </div>
+
   <app-hero></app-hero>
   <app-home-content></app-home-content>
 </div>
